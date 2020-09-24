@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>First JS code</h1>
     <script>
-        function sayHello(name)
-        {
-            console.log("Hello " + name);
-        }
-        sayHello("Hamodi");
+      let dog = {
+        name: "D0ge",
+        age: 35,
+        jumpStrength: 100,
+        likesFood: true,
+        barkFunc() {
+          alert("Bark d0ge!");
+        },
+        dogbrother: {
+          name: "D0ge v2",
+          age: 40,
+          jumpStrength: 150,
+          likesFood: false,
+          barkFunc() {
+            alert("Bark d0ge v2!");
+          },
+        },
+      };
+
+      console.log(
+        "Dog name: " + dog.name,
+        "Dog age: " + dog.age,
+        "Dog jump strength: " + dog.jumpStrength,
+        "Dog likes food: " + dog.likesFood
+      );
+
+      console.log(
+        "Dog bro name: " + dog.dogbrother.name,
+        "Dog bro age: " + dog.dogbrother.age,
+        "Dog bro jump strength: " + dog.dogbrother.jumpStrength,
+        "Dog bro likes food: " + dog.dogbrother.likesFood
+      );
+
+      document.addEventListener("click", dog.barkFunc);
     </script>
-</body>
+  </body>
 </html>
